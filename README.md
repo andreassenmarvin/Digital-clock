@@ -1,5 +1,5 @@
 # DIGITAL CLOCK
-This displays a digital clock current time.You can choose either 12-hr-system or 24-hr-system
+This displays a digital clock current time.You can choose either 12-hr-system or 24-hr-system.
 ## Setup/Installation Requirements
 * Fork/Clone the repository
 ```
