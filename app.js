@@ -7,7 +7,7 @@ function generateTime (){
     const date = new Date;
     let hour = date.getHours();
     let timeStatus = '';
-    const min = date.getMinutes();
+    const min = ("0" + date.getMinutes()).substr(-2);
     const sec = date.getSeconds();
     if (format === '12') {
       timeStatus = (hour >= 12) ? 'PM' : 'AM';
@@ -15,3 +15,11 @@ function generateTime (){
     }
     clockEl.innerHTML = `<h1>${hour} : ${min} : ${sec} ${timeStatus}</h1>`
   }
+
+  buttons.forEach((button)=>{
+    button.addEventListener('click', ()=>{
+      const format = button.getAttribute('data-format');
+      clockEl.setAttribute('data-format', format);
+      generateTime();
+    })
+  })
