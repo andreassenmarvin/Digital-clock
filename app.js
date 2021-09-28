@@ -8,7 +8,7 @@ function generateTime (){
     let hour = date.getHours();
     let timeStatus = '';
     const min = ("0" + date.getMinutes()).substr(-2);
-    const sec = date.getSeconds();
+    const sec = ("0" + date.getSeconds()).substr(-2);
     if (format === '12') {
       timeStatus = (hour >= 12) ? 'PM' : 'AM';
       hour = (hour > 12) ? hour % 12 : hour;
